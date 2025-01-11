@@ -9,7 +9,7 @@ spline
       console.log("clicking ocurring");
       console.log(e);
       if (e.target.id === '20962730-89c9-4db7-914c-41ce2ebc6e6e') {
-        window.location.href = '/projects';
+        window.location.assign('./projects/');
         console.log("clicked");
       }
     });
