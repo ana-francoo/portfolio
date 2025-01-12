@@ -8,7 +8,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: '/index.html',
-        projects: '/projects/index.html'
+        projects: '/projects/index.html',
+
+        flockstock: '/projects/flockstock.html',
+        holoconnect: '/projects/holoconnect.html',
+        hydropal: '/projects/hydropal.html',
+        mlchurn: '/projects/mlchurn.html',
+        pmpodcast: '/projects/pmpodcast.html'
       }
     }
   }
