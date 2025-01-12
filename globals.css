@@ -1,5 +1,15 @@
+body {
+  margin: 0;
+}
+
+canvas {
+  display: block;
+  width: 100dvw;
+  height: 100dvh;
+}
+
 body.loading::after {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +21,7 @@ body.loading::after {
 }
 
 body.loading::before {
-  content: '';
+  content: "";
   width: 48px;
   height: 48px;
   border: 5px solid #000;
@@ -26,6 +36,10 @@ body.loading::before {
 }
 
 @keyframes rotation {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
