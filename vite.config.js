@@ -14,7 +14,9 @@ export default defineConfig({
         holoconnect: '/projects/holoconnect.html',
         hydropal: '/projects/hydropal.html',
         mlchurn: '/projects/mlchurn.html',
-        pmpodcast: '/projects/pmpodcast.html'
+        pmpodcast: '/projects/pmpodcast.html',
+
+        root: '/root.html'
       }
     }
   }
