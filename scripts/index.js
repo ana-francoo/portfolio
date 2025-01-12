@@ -8,12 +8,14 @@ spline
   .then(() => {
     document.body.classList.remove("loading");
     spline.addEventListener("mouseDown", (e) => {
-      console.log("clicking ocurring");
-      console.log(e);
       if (e.target.id === "20962730-89c9-4db7-914c-41ce2ebc6e6e") {
         window.location.assign("./projects/");
-        console.log("clicked");
       }
+      if (e.target.id === "3241c30f-1e4b-49cd-b8ac-c59ee9899da6") { // about me sign
+        window.location.href = "/aboutme";
+      }
+
+      //
     });
   });
 //https://prod.spline.design/bHky9zqTjopWM3Ns/scene.splinecode

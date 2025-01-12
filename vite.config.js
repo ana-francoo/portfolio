@@ -16,7 +16,8 @@ export default defineConfig({
         mlchurn: '/projects/mlchurn.html',
         pmpodcast: '/projects/pmpodcast.html',
 
-        root: '/root.html'
+        root: '/root.html',
+        aboutme: '/aboutme.html'
       }
     }
   }
