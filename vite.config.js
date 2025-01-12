@@ -17,7 +17,8 @@ export default defineConfig({
         pmpodcast: '/projects/pmpodcast.html',
 
         root: '/root.html',
-        aboutme: '/aboutme.html'
+        aboutme: '/aboutme.html',
+        resume : '/resume.pdf'
       }
     }
   }

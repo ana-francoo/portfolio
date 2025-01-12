@@ -32,9 +32,5 @@ spline
         // back button
         window.location.href = "/root"; // go to root page
       }
-      if (e.target.id === "501ec8c8-d04d-4a0c-9bd7-b04972d58cfc") { //resume sign
-        // back button
-        window.location.href = "/resume.pdf"; // go to root page
-      }
     });
   });
