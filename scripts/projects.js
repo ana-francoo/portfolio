@@ -8,8 +8,6 @@ spline
   .then(() => {
     document.body.classList.remove("loading");
     spline.addEventListener("mouseDown", (e) => {
-      console.log("click ocurred");
-      console.log(e);
       if (e.target.id === "5fd19ab0-e0e1-4b1e-88c9-7a6ac4cdca96") {
         // holoconnect container
         window.location.href = "/projects/holoconnect";
@@ -33,6 +31,10 @@ spline
       if (e.target.id === "f7b8d336-95f9-4f63-9fb6-ad1aff62cf06") {
         // back button
         window.location.href = "/root"; // go to root page
+      }
+      if (e.target.id === "501ec8c8-d04d-4a0c-9bd7-b04972d58cfc") { //resume sign
+        // back button
+        window.location.href = "/resume.pdf"; // go to root page
       }
     });
   });

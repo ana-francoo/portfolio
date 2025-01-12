@@ -16,5 +16,9 @@ spline
         // About Me sign
         window.location.href = "/aboutme";
       }
+      if (e.target.id === "501ec8c8-d04d-4a0c-9bd7-b04972d58cfc") {
+        // About Me sign
+        window.location.href = "/resume.pdf";
+      }
     });
   });

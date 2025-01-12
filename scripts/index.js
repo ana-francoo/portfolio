@@ -14,6 +14,10 @@ spline
       if (e.target.id === "3241c30f-1e4b-49cd-b8ac-c59ee9899da6") { // about me sign
         window.location.href = "/aboutme";
       }
+      if (e.target.id === "501ec8c8-d04d-4a0c-9bd7-b04972d58cfc") { //resume sign
+        // back button
+        window.location.href = "/resume.pdf"; // go to root page
+      }
 
       //
     });
