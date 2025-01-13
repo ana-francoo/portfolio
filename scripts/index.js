@@ -4,7 +4,7 @@ const canvas = document.getElementById("canvas3d");
 const spline = new Application(canvas);
 document.body.classList.add("loading");
 spline
-  .load("scene (1).splinecode") //
+  .load('https://prod.spline.design/M4yHcdbcwkwBW-Sl/scene.splinecode') //
   .then(() => {
     document.body.classList.remove("loading");
     spline.addEventListener("mouseDown", (e) => {
