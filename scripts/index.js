@@ -4,7 +4,7 @@ const canvas = document.getElementById("canvas3d");
 const spline = new Application(canvas);
 document.body.classList.add("loading");
 spline
-  .load("https://prod.spline.design/M4yHcdbcwkwBW-Sl/scene.splinecode") //
+  .load("scene (1).splinecode") //
   .then(() => {
     document.body.classList.remove("loading");
     spline.addEventListener("mouseDown", (e) => {
@@ -17,6 +17,10 @@ spline
       if (e.target.id === "501ec8c8-d04d-4a0c-9bd7-b04972d58cfc") { //resume sign
         // back button
         window.location.href = "/resume.pdf"; // go to root page
+      }
+      if (e.target.id === "fc58bdf3-5220-44e2-b62b-f8cafb70b055") { //skip sign
+        // back button
+        window.location.href = "/root"; // go to root page
       }
 
       //
