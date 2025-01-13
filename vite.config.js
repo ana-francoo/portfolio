@@ -18,8 +18,8 @@ export default defineConfig({
 
         root: '/root.html',
         aboutme: '/aboutme.html',
-        resume: '/resume.pdf',
-        scene: '/scene (1).splinecode'
+        resume: '/resume.pdf'
+        //scene: '/scene (1).splinecode'
       }
     }
   }
