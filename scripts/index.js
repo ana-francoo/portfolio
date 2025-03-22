@@ -2,6 +2,31 @@ import { Application } from "@splinetool/runtime";
 
 const canvas = document.getElementById("canvas3d");
 const spline = new Application(canvas);
+
+// Function to update canvas dimensions on resize
+function resizeCanvas() {
+  const pixelRatio = window.devicePixelRatio || 1;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  // Update the canvas's internal resolution for sharp rendering
+  canvas.width = width * pixelRatio;
+  canvas.height = height * pixelRatio;
+
+  // Update the CSS size to fill the viewport
+  canvas.style.width = `${width}px`;
+  canvas.style.height = `${height}px`;
+
+  // Optionally dispatch a resize event if needed by Spline
+  window.dispatchEvent(new Event("resize"));
+}
+
+// Listen for window resize events
+window.addEventListener("resize", resizeCanvas);
+
+// Set initial canvas size on load
+resizeCanvas();
+
 document.body.classList.add("loading");
 spline
   .load('https://prod.spline.design/M4yHcdbcwkwBW-Sl/scene.splinecode') //
