@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="dns-prefetch" href="https://prod.spline.design">
+    <link rel="preconnect" href="https://prod.spline.design" crossorigin>
+    <link rel="preload" as="fetch" href="https://prod.spline.design/M4yHcdbcwkwBW-Sl/scene.splinecode" crossorigin>
+
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="stylesheet" href="/globals.css" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <title>Home</title>
     <style>
+      /* Critical CSS inlined for faster first paint */
       body { margin: 0; }
-      canvas { display: block; width: 100dvw; height: 100dvh; } 
+      canvas { display: block; width: 100dvw; height: 100dvh; }
+      .loading-overlay { position: fixed; inset: 0; display: grid; place-items: center; background: radial-gradient(1200px 700px at 0% 0%, rgba(239, 68, 68, 0.18), transparent 60%), radial-gradient(1000px 600px at 100% 0%, rgba(56, 189, 248, 0.12), transparent 55%), rgba(7, 10, 20, 0.9); transition: opacity 300ms ease, visibility 300ms ease; z-index: 1000; opacity: 0; visibility: hidden; }
+      body.loading .loading-overlay { opacity: 1; visibility: visible; }
+      .loading-content { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+      .loading-spinner { width: 56px; height: 56px; border-radius: 50%; border: 6px solid transparent; border-top-color: #93c5fd; border-right-color: #ef4444; filter: drop-shadow(0 0 14px rgba(239, 68, 68, 0.45)); animation: spin 900ms linear infinite; }
+      .loading-text { font: 500 14px/1.2 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; letter-spacing: 0.02em; color: #e5e7eb; text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { .loading-spinner { animation: none; border-right-color: transparent; } }
     </style>
 </head>
 <body>
     <canvas id="canvas3d"></canvas>
+    <div class="loading-overlay" aria-hidden="true">
+      <div class="loading-content">
+        <div class="loading-spinner" role="progressbar" aria-label="Loading"></div>
+      </div>
+    </div>
     <script type="module" src="/scripts/index.js"></script>
 </body>
 </html>
